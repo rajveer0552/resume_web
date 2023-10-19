@@ -1,0 +1,38 @@
+/* styles.css */
+
+/* Change background color on hover */
+.nav-item .nav-link:hover {
+  background-color: black; /* Change this color to your desired hover background color */
+}
+/* styles.css */
+.resume-form {
+  display: flex;
+  flex-direction: row; /* Arrange items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if there's not enough space */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  max-width: 600px; /* Adjust the max-width according to your design */
+  margin: 0 auto;
+}
+
+.form-group {
+  flex: 0 0 48%; /* Set a specific width for each form group (adjust as needed) */
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn-submit {
+  width: 100%; /* Make the button span the full width of the form group */
+}
