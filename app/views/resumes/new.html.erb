@@ -26,5 +26,13 @@
 <%= form.label :email, class: 'form-label' %> 
 <%= form.text_field :email %>
 </div>
+<div>
+	<%= form.label :attachment, class: 'form-label' %>
+	<%= form.file_field :attachment %>
+</div>
+<div>
+	<%= form.label :image, class: 'form-label' %>
+	<%= form.file_field :image %>
+</div>
 <%= form.submit "Submit", class: 'btn-submit' %>
 <% end %>

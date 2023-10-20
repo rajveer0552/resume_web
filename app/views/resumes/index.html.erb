@@ -1,2 +1,39 @@
-<h1>Resumes#index</h1>
-<p>Find me in app/views/resumes/index.html.erb</p>
+<h1>Resume</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>Contact Number</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Attachment</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @resumes.each do |resume| %>
+      <tr>
+        <td><%= resume.id %></td>
+        <td><%= resume.first_name %></td>
+        <td><%= resume.last_name %></td>
+        <td><%= resume.age %></td>
+        <td><%= resume.contact_number %></td>
+        <td><%= resume.email %></td>
+        <td><%= resume.address %></td>
+   		<td>
+          <% if resume.attachment.present? %>
+            <%= link_to 'Download', resume.attachment.url, download: true %>
+          <% else %>
+            No attachment
+          <% end %>
+        </td>
+       <td>
+            <%= image_tag resume.image_url, alt: 'Resume Image' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
